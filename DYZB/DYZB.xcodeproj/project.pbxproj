@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		19ADC1E91F3BEB780000F415 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ADC1E81F3BEB780000F415 /* AppDelegate.swift */; };
-		19ADC1EB1F3BEB780000F415 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ADC1EA1F3BEB780000F415 /* ViewController.swift */; };
 		19ADC1EE1F3BEB780000F415 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19ADC1EC1F3BEB780000F415 /* Main.storyboard */; };
 		19ADC1F01F3BEB780000F415 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19ADC1EF1F3BEB780000F415 /* Assets.xcassets */; };
 		19ADC1F31F3BEB780000F415 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19ADC1F11F3BEB780000F415 /* LaunchScreen.storyboard */; };
@@ -36,7 +35,6 @@
 /* Begin PBXFileReference section */
 		19ADC1E51F3BEB780000F415 /* DYZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19ADC1E81F3BEB780000F415 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		19ADC1EA1F3BEB780000F415 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		19ADC1ED1F3BEB780000F415 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19ADC1EF1F3BEB780000F415 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19ADC1F21F3BEB780000F415 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -97,8 +95,8 @@
 		19ADC1E71F3BEB780000F415 /* DYZB */ = {
 			isa = PBXGroup;
 			children = (
+				19ADC2161F3BF0B70000F415 /* Classes */,
 				19ADC1E81F3BEB780000F415 /* AppDelegate.swift */,
-				19ADC1EA1F3BEB780000F415 /* ViewController.swift */,
 				19ADC1EC1F3BEB780000F415 /* Main.storyboard */,
 				19ADC1EF1F3BEB780000F415 /* Assets.xcassets */,
 				19ADC1F11F3BEB780000F415 /* LaunchScreen.storyboard */,
@@ -123,6 +121,61 @@
 				19ADC20A1F3BEB780000F415 /* Info.plist */,
 			);
 			path = DYZBUITests;
+			sourceTree = "<group>";
+		};
+		19ADC2161F3BF0B70000F415 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				19ADC21A1F3BF0B70000F415 /* Main */,
+				19ADC2181F3BF0B70000F415 /* Home */,
+				19ADC2191F3BF0B70000F415 /* Live */,
+				19ADC2171F3BF0B70000F415 /* Follow */,
+				19ADC21B1F3BF0B70000F415 /* Profile */,
+				19ADC21C1F3BF0B70000F415 /* Tools */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19ADC2171F3BF0B70000F415 /* Follow */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Follow;
+			sourceTree = "<group>";
+		};
+		19ADC2181F3BF0B70000F415 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		19ADC2191F3BF0B70000F415 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		19ADC21A1F3BF0B70000F415 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		19ADC21B1F3BF0B70000F415 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		19ADC21C1F3BF0B70000F415 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +246,7 @@
 				TargetAttributes = {
 					19ADC1E41F3BEB780000F415 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = BR67EGUFQ3;
 						ProvisioningStyle = Automatic;
 					};
 					19ADC1F81F3BEB780000F415 = {
@@ -259,7 +313,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19ADC1EB1F3BEB780000F415 /* ViewController.swift in Sources */,
 				19ADC1E91F3BEB780000F415 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,7 +465,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = BR67EGUFQ3;
 				INFOPLIST_FILE = DYZB/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "guo-xiaofei.DYZB";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -424,7 +480,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = BR67EGUFQ3;
 				INFOPLIST_FILE = DYZB/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "guo-xiaofei.DYZB";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -505,6 +564,7 @@
 				19ADC20F1F3BEB780000F415 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		19ADC2101F3BEB780000F415 /* Build configuration list for PBXNativeTarget "DYZBTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +573,7 @@
 				19ADC2121F3BEB780000F415 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		19ADC2131F3BEB780000F415 /* Build configuration list for PBXNativeTarget "DYZBUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +582,7 @@
 				19ADC2151F3BEB780000F415 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
