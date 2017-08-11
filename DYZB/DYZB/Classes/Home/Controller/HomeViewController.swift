@@ -19,17 +19,19 @@ class HomeViewController: UIViewController {
         return titleView
     }()
     fileprivate lazy var pageContenView : PageContenView = {[weak self] in
-        let contenH = kScreenH - kStatusBarH - kNavigationBarH - kTitleViewH
+        let contenH = kScreenH - kStatusBarH - kNavigationBarH - kTitleViewH - kTabbarH
         let contenFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH + kTitleViewH, width: kScreenW, height: contenH)
     
         var childVcs = [UIViewController]()
-        for _ in 0..<4{
+        childVcs.append(RecommendViewController())
+        for _ in 0..<3{
             let vc = UIViewController()
             vc.view.backgroundColor = UIColor(red:CGFloat(arc4random_uniform(255)), green: CGFloat(arc4random_uniform(255)), blue: CGFloat(arc4random_uniform(255)))
             childVcs.append(vc)
         }
         
         let contenView = PageContenView(frame: contenFrame, childVcs: childVcs, parentViewController: self)
+        contenView.delegate = self
         return contenView
     }()
     
@@ -71,4 +73,10 @@ extension HomeViewController : PageTitleViewDelegate{
         pageContenView.setCurrentIndex(currentIndex: selectedIndex)
     }
 
+}
+
+extension HomeViewController : PageContentViewDelegate{
+    func pageContentView(contentView: PageContenView, progress: CGFloat, sourceIndex: Int, targerIndex: Int) {
+        pageTitleView.setTitleWithProgress(progress : progress, sourceIndex : sourceIndex, targerIndex : targerIndex)
+    }
 }

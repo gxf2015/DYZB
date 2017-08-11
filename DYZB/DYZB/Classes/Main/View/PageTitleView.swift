@@ -13,9 +13,13 @@ protocol PageTitleViewDelegate : class {
 }
 
 
-
+//
 fileprivate let kScrollLineH : CGFloat = 2
+fileprivate let kNormalColor : (CGFloat, CGFloat, CGFloat) = (85, 85, 85)
+fileprivate let kSelectColor : (CGFloat, CGFloat, CGFloat) = (255, 128, 0)
 
+
+//
 class PageTitleView: UIView {
     fileprivate var currentIndex = 0
     fileprivate var titles : [String]
@@ -77,7 +81,7 @@ extension PageTitleView{
             label.text = title
             label.tag = index
             label.font = UIFont.systemFont(ofSize: 16.0)
-            label.textColor = UIColor.darkGray
+            label.textColor = UIColor(red: kNormalColor.0, green: kNormalColor.1, blue: kNormalColor.2)
             label.textAlignment = .center
             
             let  labelX : CGFloat = labelW * CGFloat(index)
@@ -126,8 +130,8 @@ extension PageTitleView{
         //2
         let oldLabel = titleLabels[currentIndex]
         //3
-        currentLabel.textColor = UIColor.orange
-        oldLabel.textColor = UIColor.darkGray
+        currentLabel.textColor = UIColor(red: kSelectColor.0, green: kSelectColor.1, blue: kSelectColor.2)
+        oldLabel.textColor = UIColor(red: kNormalColor.0, green: kNormalColor.1, blue: kNormalColor.2)
         //4
         currentIndex = currentLabel.tag
         //5
@@ -141,3 +145,29 @@ extension PageTitleView{
         
     }
 }
+
+
+extension  PageTitleView {
+
+    func setTitleWithProgress(progress : CGFloat, sourceIndex : Int, targerIndex : Int) {
+        // 1
+        let sourceLabel = titleLabels[sourceIndex]
+        let targerLabel = titleLabels[targerIndex]
+        //2
+        let moveTotalX = targerLabel.frame.origin.x - sourceLabel.frame.origin.x
+        let moveX = moveTotalX * progress
+        scrollLine.frame.origin.x = sourceLabel.frame.origin.x + moveX
+        
+        //3
+        let colorDelta  = (kSelectColor.0 - kNormalColor.0, kSelectColor.1 - kNormalColor.1, kSelectColor.2 - kNormalColor.2)
+        
+        sourceLabel.textColor = UIColor(red: kSelectColor.0 - colorDelta.0 * progress, green: kSelectColor.1 - colorDelta.1 * progress, blue: kSelectColor.2 - colorDelta.2 * progress)
+        targerLabel.textColor = UIColor(red: kNormalColor.0 + colorDelta.0 * progress, green: kNormalColor.1 + colorDelta.1 * progress, blue: kNormalColor.2 + colorDelta.2 * progress)
+        
+        currentIndex = targerIndex
+    }
+}
+
+
+
+
