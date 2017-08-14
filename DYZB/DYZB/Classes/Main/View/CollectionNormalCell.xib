@@ -69,6 +69,12 @@
                 <constraint firstItem="CUx-qm-wEK" firstAttribute="top" secondItem="cqI-5A-yeq" secondAttribute="bottom" constant="5" id="yp5-I6-lJh"/>
             </constraints>
             <size key="customSize" width="273" height="245"/>
+            <connections>
+                <outlet property="iconImageView" destination="cqI-5A-yeq" id="TGL-lk-lMi"/>
+                <outlet property="nickNameLabel" destination="igb-ed-cVn" id="rb5-iW-5W9"/>
+                <outlet property="onlineBtn" destination="UKb-ve-FG3" id="ndx-la-mbg"/>
+                <outlet property="roomNameLabel" destination="CUx-qm-wEK" id="kIG-aK-JSo"/>
+            </connections>
             <point key="canvasLocation" x="145.5" y="151.5"/>
         </collectionViewCell>
     </objects>

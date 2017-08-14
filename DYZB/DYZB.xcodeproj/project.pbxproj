@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		191F874B1F41299D006F81D3 /* RecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191F874A1F41299D006F81D3 /* RecommendViewModel.swift */; };
+		191F874D1F412C79006F81D3 /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191F874C1F412C79006F81D3 /* NSDate-Extension.swift */; };
+		191F874F1F413641006F81D3 /* AncnorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191F874E1F413641006F81D3 /* AncnorGroup.swift */; };
+		191F87531F4186BE006F81D3 /* CollectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191F87521F4186BE006F81D3 /* CollectionBaseCell.swift */; };
+		191F87551F418C19006F81D3 /* RecommendCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191F87541F418C19006F81D3 /* RecommendCycleView.swift */; };
+		191F87571F418C32006F81D3 /* RecommendCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 191F87561F418C32006F81D3 /* RecommendCycleView.xib */; };
 		1953FA631F3D44F2006A7923 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1953FA621F3D44F2006A7923 /* RecommendViewController.swift */; };
 		1953FA661F3D788A006A7923 /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1953FA641F3D788A006A7923 /* CollectionHeaderView.swift */; };
 		1953FA671F3D788A006A7923 /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1953FA651F3D788A006A7923 /* CollectionHeaderView.xib */; };
@@ -53,6 +59,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		191F874A1F41299D006F81D3 /* RecommendViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewModel.swift; sourceTree = "<group>"; };
+		191F874C1F412C79006F81D3 /* NSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
+		191F874E1F413641006F81D3 /* AncnorGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AncnorGroup.swift; sourceTree = "<group>"; };
+		191F87511F4139D1006F81D3 /* Swift-Bridge-Objective-C.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Swift-Bridge-Objective-C.h"; sourceTree = "<group>"; };
+		191F87521F4186BE006F81D3 /* CollectionBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionBaseCell.swift; sourceTree = "<group>"; };
+		191F87541F418C19006F81D3 /* RecommendCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendCycleView.swift; sourceTree = "<group>"; };
+		191F87561F418C32006F81D3 /* RecommendCycleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendCycleView.xib; sourceTree = "<group>"; };
 		1953FA621F3D44F2006A7923 /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		1953FA641F3D788A006A7923 /* CollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
 		1953FA651F3D788A006A7923 /* CollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
@@ -115,6 +128,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		191F87491F412979006F81D3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				191F874A1F41299D006F81D3 /* RecommendViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		19ADC1DC1F3BEB780000F415 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +143,7 @@
 				19ADC1FC1F3BEB780000F415 /* DYZBTests */,
 				19ADC2071F3BEB780000F415 /* DYZBUITests */,
 				19ADC1E61F3BEB780000F415 /* Products */,
+				191F87511F4139D1006F81D3 /* Swift-Bridge-Objective-C.h */,
 				A95B20C82CD93779BF93AB97 /* Pods */,
 				E03A07BA78F4F36A88EE8CD9 /* Frameworks */,
 			);
@@ -191,6 +213,7 @@
 		19ADC2181F3BF0B70000F415 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				191F87491F412979006F81D3 /* ViewModel */,
 				19ADC2321F3C01D80000F415 /* Model */,
 				19ADC2331F3C01D80000F415 /* View */,
 				19ADC2311F3C01D80000F415 /* Controller */,
@@ -246,6 +269,7 @@
 		19ADC22E1F3C01C10000F415 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				191F874E1F413641006F81D3 /* AncnorGroup.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -259,6 +283,7 @@
 				1953FA691F3D7BEC006A7923 /* CollectionNormalCell.xib */,
 				1953FA6C1F3D807C006A7923 /* CollectionPrettyCell.swift */,
 				1953FA6D1F3D807C006A7923 /* CollectionPrettyCell.xib */,
+				191F87521F4186BE006F81D3 /* CollectionBaseCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -285,6 +310,8 @@
 			children = (
 				1953FA641F3D788A006A7923 /* CollectionHeaderView.swift */,
 				1953FA651F3D788A006A7923 /* CollectionHeaderView.xib */,
+				191F87541F418C19006F81D3 /* RecommendCycleView.swift */,
+				191F87561F418C32006F81D3 /* RecommendCycleView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -294,6 +321,7 @@
 			children = (
 				19ADC2371F3C06A70000F415 /* UIBarButtonItem-Extension.swift */,
 				19ADC23F1F3C37AE0000F415 /* UIColor-Extension.swift */,
+				191F874C1F412C79006F81D3 /* NSDate-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -433,6 +461,7 @@
 				19ADC1F01F3BEB780000F415 /* Assets.xcassets in Resources */,
 				19ADC1EE1F3BEB780000F415 /* Main.storyboard in Resources */,
 				19ADC2231F3BF8EA0000F415 /* Live.storyboard in Resources */,
+				191F87571F418C32006F81D3 /* RecommendCycleView.xib in Resources */,
 				1953FA6F1F3D807C006A7923 /* CollectionPrettyCell.xib in Resources */,
 				19ADC2271F3BF92F0000F415 /* Profile.storyboard in Resources */,
 				19ADC2251F3BF9110000F415 /* Follow.storyboard in Resources */,
@@ -512,15 +541,20 @@
 				1953FA661F3D788A006A7923 /* CollectionHeaderView.swift in Sources */,
 				19ADC2401F3C37AE0000F415 /* UIColor-Extension.swift in Sources */,
 				1953FA631F3D44F2006A7923 /* RecommendViewController.swift in Sources */,
+				191F87531F4186BE006F81D3 /* CollectionBaseCell.swift in Sources */,
 				19ADC2301F3C01C10000F415 /* MainViewController.swift in Sources */,
 				19ADC23A1F3C2A060000F415 /* PageTitleView.swift in Sources */,
 				19ADC2381F3C06A70000F415 /* UIBarButtonItem-Extension.swift in Sources */,
+				191F87551F418C19006F81D3 /* RecommendCycleView.swift in Sources */,
 				19ADC23C1F3C2B7C0000F415 /* Common.swift in Sources */,
 				19ADC2351F3C020C0000F415 /* HomeViewController.swift in Sources */,
 				1953FA6E1F3D807C006A7923 /* CollectionPrettyCell.swift in Sources */,
+				191F874F1F413641006F81D3 /* AncnorGroup.swift in Sources */,
+				191F874D1F412C79006F81D3 /* NSDate-Extension.swift in Sources */,
 				1953FA6A1F3D7BEC006A7923 /* CollectionNormalCell.swift in Sources */,
 				1953FA711F3D8C8D006A7923 /* NetworkTools.swift in Sources */,
 				19ADC23E1F3C35970000F415 /* PageContenView.swift in Sources */,
+				191F874B1F41299D006F81D3 /* RecommendViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,6 +715,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "guo-xiaofei.DYZB";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/guoxiaofei/Documents/DouyuZB/DYZB/Swift-Bridge-Objective-C.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -697,6 +732,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "guo-xiaofei.DYZB";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/guoxiaofei/Documents/DouyuZB/DYZB/Swift-Bridge-Objective-C.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

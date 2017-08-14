@@ -122,11 +122,15 @@ extension PageTitleView{
 
 extension PageTitleView{
     @objc fileprivate func titleLabelClick(tapGes : UITapGestureRecognizer){
-    
+        
         //1
         guard let currentLabel = tapGes.view as? UILabel else {
             return
         }
+        if currentLabel.tag == currentIndex {
+            return
+        }
+        
         //2
         let oldLabel = titleLabels[currentIndex]
         //3
