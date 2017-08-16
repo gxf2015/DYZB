@@ -12,6 +12,7 @@ import HandyJSON
 class RecommendViewModel {
 
     lazy var ancnorGroups : [AncnorGroup] = [AncnorGroup]()
+    lazy var cycleModels : [CycleModel] = [CycleModel]()
     fileprivate lazy var bigDataGroup : AncnorGroup = AncnorGroup()
     fileprivate lazy var verticalGroup : AncnorGroup = AncnorGroup()
 }
@@ -80,5 +81,24 @@ extension RecommendViewModel{
         }
        
     }
+    
+    
+    func  requestCycleData(finishCallback : @escaping () -> ()){
+        
+        NetworkTools.requestData(type: .GET, URLString: "http://www.douyutv.com/api/v1/slide/6", parameters: ["version" : "2.300"]) { (result) in
+            
+            //1
+            guard let resultDict = result as? [String : NSObject] else { return }
+            let dataArray = resultDict["data"]
+            
+            self.cycleModels = JSONDeserializer<CycleModel>.deserializeModelArrayFrom(array: dataArray as? NSArray)! as! [CycleModel]
+            
+            
+            finishCallback()
+        }
+    
+    }
+    
+   
 
 }

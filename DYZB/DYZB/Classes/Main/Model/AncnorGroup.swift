@@ -17,6 +17,7 @@ class AncnorGroup: HandyJSON {
     
     var icon_name = "home_header_normal"
     
+    var icon_url : String = ""
     
     required init(){}
 }

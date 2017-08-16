@@ -14,6 +14,7 @@ fileprivate let kNormalItemH  = kItemW * 3 / 4
 fileprivate let kPrettyItemH  = kItemW * 4 / 3
 fileprivate let kHeaderViewH : CGFloat = 50
 fileprivate let kCycleViewH = kScreenW * 3 / 8
+fileprivate let kGameViewH : CGFloat = 90
 
 
 fileprivate let kNormalCellID = "kNormalCellID"
@@ -26,10 +27,14 @@ class RecommendViewController: UIViewController {
     fileprivate lazy var recommendVM :RecommendViewModel = RecommendViewModel()
     fileprivate lazy var cycleView : RecommendCycleView = {
         let cycleView = RecommendCycleView.recommendCycleView()
-        cycleView.frame = CGRect(x: 0, y: -kCycleViewH, width: kScreenW, height: kCycleViewH)
+        cycleView.frame = CGRect(x: 0, y: -(kCycleViewH + kGameViewH), width: kScreenW, height: kCycleViewH)
         return cycleView
     }()
-
+    fileprivate lazy var gameView : RecommendGameView = {
+        let gameView = RecommendGameView.recommendGameView()
+        gameView.frame = CGRect(x: 0, y: -kGameViewH, width: kScreenW, height: kGameViewH)
+        return gameView
+    }()
 
     //
     fileprivate lazy var collectionView : UICollectionView = {[unowned self] in
@@ -75,8 +80,8 @@ extension RecommendViewController {
         view.addSubview(collectionView)
         
         collectionView.addSubview(cycleView)
-        
-        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH, left: 0, bottom: 0, right: 0)
+        collectionView.addSubview(gameView)
+        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH + kGameViewH, left: 0, bottom: 0, right: 0)
     }
 }
 
@@ -84,10 +89,16 @@ extension RecommendViewController{
 
     fileprivate func loadData(){
         recommendVM.requestData {
-            print(self.recommendVM.ancnorGroups)
             self.collectionView.reloadData()
             
+            self.gameView.groups = self.recommendVM.ancnorGroups
+
         }
+        
+        recommendVM.requestCycleData {
+            self.cycleView.cycleModels = self.recommendVM.cycleModels
+        }
+       
     }
 }
 

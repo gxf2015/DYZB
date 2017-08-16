@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionGameCell" customModule="DYZB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="英雄联盟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bx4-8e-qrH">
+                        <rect key="frame" x="15" y="66" width="50" height="14.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="7Db-vQ-6Li"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eHy-fX-6NR">
+                        <rect key="frame" x="17" y="15" width="46" height="46"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="eHy-fX-6NR" secondAttribute="height" multiplier="1:1" id="ZGr-1h-2f9"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="23"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="bx4-8e-qrH" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="1l2-6o-Nyq"/>
+                <constraint firstAttribute="bottom" secondItem="bx4-8e-qrH" secondAttribute="bottom" constant="10" id="Lpc-eu-aTh"/>
+                <constraint firstItem="eHy-fX-6NR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="Nel-Y6-Cg7"/>
+                <constraint firstItem="bx4-8e-qrH" firstAttribute="top" secondItem="eHy-fX-6NR" secondAttribute="bottom" constant="5" id="Yo2-2i-NpN"/>
+                <constraint firstItem="eHy-fX-6NR" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="jn0-pf-b0A"/>
+            </constraints>
+            <size key="customSize" width="111" height="120"/>
+            <connections>
+                <outlet property="iconImageView" destination="eHy-fX-6NR" id="3sq-vs-KGU"/>
+                <outlet property="titleLabel" destination="bx4-8e-qrH" id="1N5-MP-Toq"/>
+            </connections>
+            <point key="canvasLocation" x="64" y="89"/>
+        </collectionViewCell>
+    </objects>
+</document>
